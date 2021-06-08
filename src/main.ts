@@ -25,10 +25,11 @@ function todo(container: Element) {
   form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
     const inputs = form.elements  as HTMLFormControlsCollection;
-     const input  = <HTMLInputElement>inputs["text"]  
+     const input  = <HTMLInputElement>inputs[0] //"inputs?.[text]" 
+     //const [inp] = inputs  
    //const input =  (HTMLFormElement as { [key: string]: any })["text"] as HTMLFormElement
-     //const [,,inp] = inputs 
-    console.log(input);
+     
+    console.log(inputs);
     addItem(input.value);
     form.reset();
   });
