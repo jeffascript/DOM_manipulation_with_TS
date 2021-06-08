@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
+    /**
+     * For multiple todos
+     */
+  //document.querySelectorAll('.todo').forEach(container => todo(container))
+
   const container = document.querySelector('.todo')!;
   todo(container);
 });
